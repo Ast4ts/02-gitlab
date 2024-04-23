@@ -1,0 +1,19 @@
+2024-04-23 11:07:05,156 p=37285 u=User n=ansible | PLAY [aws] ********************************************************************************************************************************************************************************
+2024-04-23 11:07:05,160 p=37285 u=User n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************
+2024-04-23 11:07:09,232 p=37285 u=User n=ansible | ok: [gitlab]
+2024-04-23 11:07:09,241 p=37285 u=User n=ansible | TASK [gitlab : Creating GitLab directory] *************************************************************************************************************************************************
+2024-04-23 11:07:10,555 p=37285 u=User n=ansible | changed: [gitlab]
+2024-04-23 11:07:10,563 p=37285 u=User n=ansible | TASK [gitlab : Copy docker-compose file] **************************************************************************************************************************************************
+2024-04-23 11:07:13,419 p=37285 u=User n=ansible | changed: [gitlab]
+2024-04-23 11:07:13,427 p=37285 u=User n=ansible | TASK [gitlab : Run containers] ************************************************************************************************************************************************************
+2024-04-23 11:07:14,749 p=37285 u=User n=ansible | fatal: [gitlab]: FAILED! => {"changed": true, "cmd": "docker-compose -f ${HOME}/gitlab/docker-compose.yml up -d", "delta": "0:00:00.032055", "end": "2024-04-23 08:07:14.689917", "msg": "non-zero return code", "rc": 14, "start": "2024-04-23 08:07:14.657862", "stderr": "stat /root/gitlab/docker-compose.yml: no such file or directory", "stderr_lines": ["stat /root/gitlab/docker-compose.yml: no such file or directory"], "stdout": "", "stdout_lines": []}
+2024-04-23 11:07:14,750 p=37285 u=User n=ansible | ...ignoring
+2024-04-23 11:07:14,759 p=37285 u=User n=ansible | TASK [minio : Creating Minio directory] ***************************************************************************************************************************************************
+2024-04-23 11:07:16,080 p=37285 u=User n=ansible | changed: [gitlab]
+2024-04-23 11:07:16,087 p=37285 u=User n=ansible | TASK [minio : Copy docker-compose file] ***************************************************************************************************************************************************
+2024-04-23 11:07:18,603 p=37285 u=User n=ansible | changed: [gitlab]
+2024-04-23 11:07:18,609 p=37285 u=User n=ansible | TASK [minio : Run containers] *************************************************************************************************************************************************************
+2024-04-23 11:07:19,749 p=37285 u=User n=ansible | fatal: [gitlab]: FAILED! => {"changed": true, "cmd": "docker-compose -f ${HOME}/minio/docker-compose.yml up -d", "delta": "0:00:00.036514", "end": "2024-04-23 08:07:19.689809", "msg": "non-zero return code", "rc": 14, "start": "2024-04-23 08:07:19.653295", "stderr": "stat /root/minio/docker-compose.yml: no such file or directory", "stderr_lines": ["stat /root/minio/docker-compose.yml: no such file or directory"], "stdout": "", "stdout_lines": []}
+2024-04-23 11:07:19,750 p=37285 u=User n=ansible | ...ignoring
+2024-04-23 11:07:19,771 p=37285 u=User n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************
+2024-04-23 11:07:19,771 p=37285 u=User n=ansible | gitlab                     : ok=7    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   

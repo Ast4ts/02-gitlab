@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  minio:
+    image: bitnami/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER={{ minio_root_usr }}
+      - MINIO_ROOT_PASSWORD={{ minio_root_pass }}
+      - MINIO_DEFAULT_BUCKETS={{ minio_bucket }}
+      - MINIO_SCHEME=http
+      - MINIO_SERVER_URL=http://localhost:9000
+    volumes:
+      - {{ minio_dir }}:/data

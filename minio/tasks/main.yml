@@ -1,0 +1,16 @@
+- name: Creating Minio directory
+  file:
+    path: '{{ minio_dir }}'
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
+- name: Copy docker-compose file
+  template:
+    src: templates/docker.j2
+    dest: '{{ minio_dir }}/docker-compose.yml'
+
+- name: Run containers
+  ignore_errors: yes 
+  become: true
+  shell: docker-compose -f {{ minio_dir }}/docker-compose.yml up -d

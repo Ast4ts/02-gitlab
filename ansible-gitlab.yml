@@ -1,0 +1,19 @@
+- hosts: aws
+  roles:
+    - role: gitlab
+    - role: minio
+
+  vars:
+    #Specify system user and group
+    user: ubuntu
+    group: ubuntu
+
+    #GitLab role variables
+    gitlab_version: 16.11.0
+    gitlab_dir: ${HOME}/gitlab
+
+    #Minio role variables
+    minio_root_usr: root
+    minio_root_pass: any_root_password
+    minio_dir: ${HOME}/minio
+    minio_bucket: gitlabs3

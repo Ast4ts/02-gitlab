@@ -1,0 +1,16 @@
+- name: Creating GitLab directory
+  file:
+    path: '{{ gitlab_dir }}'
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
+- name: Copy docker-compose file
+  template:
+    src: templates/docker.j2
+    dest: '{{ gitlab_dir }}/docker-compose.yml'
+
+- name: Run containers
+  ignore_errors: yes 
+  become: true
+  shell: docker-compose -f {{ gitlab_dir }}/docker-compose.yml up -d

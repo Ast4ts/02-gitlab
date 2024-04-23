@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:{{ gitlab_version }}-ce.0
+    container_name: gitlab
+    restart: always
+    hostname: 'gitlab'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        # Add any other gitlab.rb configuration here, each on its own line
+        gitlab_rails['lfs_enabled'] = true
+        gitlab_rails['lfs_storage_path'] = '/var/opt/gitlab/lfs_data'
+    ports:n
+      - '8080:80'
+      - '4343:443'
+      - '2222:22'
+    volumes:
+      - '{{ gitlab_dir }}/config:/etc/gitlab'
+      - '{{ gitlab_dir }}/logs:/var/log/gitlab'
+      - '{{ gitlab_dir }}/data:/var/opt/gitlab'
+    shm_size: '256m'

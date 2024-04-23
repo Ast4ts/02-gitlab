@@ -1,0 +1,24 @@
+2024-04-22_13:27:56.92214 ts=2024-04-22T13:27:56.919Z caller=main.go:573 level=info msg="No time or size retention was set so using the default time retention" duration=15d
+2024-04-22_13:27:56.92541 ts=2024-04-22T13:27:56.922Z caller=main.go:617 level=info msg="Starting Prometheus Server" mode=server version="(version=2.51.2, branch=master, revision=b4c0ab52c3e9b940ab803581ddae9b3d9a452337)"
+2024-04-22_13:27:56.92550 ts=2024-04-22T13:27:56.922Z caller=main.go:622 level=info build_context="(go=go1.21.9, platform=linux/amd64, user=GitLab-Omnibus, date=, tags=netgo,builtinassets,stringlabels)"
+2024-04-22_13:27:56.92557 ts=2024-04-22T13:27:56.922Z caller=main.go:623 level=info host_details="(Linux 6.6.12-linuxkit #1 SMP Thu Feb  8 06:36:34 UTC 2024 x86_64 6fd91620baca (none))"
+2024-04-22_13:27:56.92563 ts=2024-04-22T13:27:56.922Z caller=main.go:624 level=info fd_limits="(soft=50000, hard=50000)"
+2024-04-22_13:27:56.92569 ts=2024-04-22T13:27:56.922Z caller=main.go:625 level=info vm_limits="(soft=unlimited, hard=unlimited)"
+2024-04-22_13:27:56.93438 ts=2024-04-22T13:27:56.934Z caller=web.go:568 level=info component=web msg="Start listening for connections" address=localhost:9090
+2024-04-22_13:27:56.94351 ts=2024-04-22T13:27:56.943Z caller=main.go:1129 level=info msg="Starting TSDB ..."
+2024-04-22_13:27:56.94890 ts=2024-04-22T13:27:56.948Z caller=tls_config.go:313 level=info component=web msg="Listening on" address=127.0.0.1:9090
+2024-04-22_13:27:56.94934 ts=2024-04-22T13:27:56.948Z caller=tls_config.go:316 level=info component=web msg="TLS is disabled." http2=false address=127.0.0.1:9090
+2024-04-22_13:27:56.96523 ts=2024-04-22T13:27:56.964Z caller=head.go:616 level=info component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+2024-04-22_13:27:56.96601 ts=2024-04-22T13:27:56.965Z caller=head.go:698 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=204.709µs
+2024-04-22_13:27:56.96622 ts=2024-04-22T13:27:56.966Z caller=head.go:706 level=info component=tsdb msg="Replaying WAL, this may take a while"
+2024-04-22_13:27:56.97165 ts=2024-04-22T13:27:56.971Z caller=head.go:778 level=info component=tsdb msg="WAL segment loaded" segment=0 maxSegment=0
+2024-04-22_13:27:56.97190 ts=2024-04-22T13:27:56.971Z caller=head.go:815 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=665.709µs wal_replay_duration=4.994625ms wbl_replay_duration=196.042µs total_replay_duration=6.645ms
+2024-04-22_13:27:56.97791 ts=2024-04-22T13:27:56.977Z caller=main.go:1150 level=info fs_type=6a656a63
+2024-04-22_13:27:56.97799 ts=2024-04-22T13:27:56.977Z caller=main.go:1153 level=info msg="TSDB started"
+2024-04-22_13:27:56.97808 ts=2024-04-22T13:27:56.978Z caller=main.go:1335 level=info msg="Loading configuration file" filename=/var/opt/gitlab/prometheus/prometheus.yml
+2024-04-22_13:27:56.98144 ts=2024-04-22T13:27:56.981Z caller=manager.go:292 level=error component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes config=kubernetes-nodes
+2024-04-22_13:27:56.98152 ts=2024-04-22T13:27:56.981Z caller=manager.go:292 level=error component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes config=kubernetes-cadvisor
+2024-04-22_13:27:56.98165 ts=2024-04-22T13:27:56.981Z caller=manager.go:292 level=error component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes config=kubernetes-pods
+2024-04-22_13:27:56.98641 ts=2024-04-22T13:27:56.986Z caller=main.go:1372 level=info msg="Completed loading of configuration file" filename=/var/opt/gitlab/prometheus/prometheus.yml totalDuration=8.306459ms db_storage=115.416µs remote_storage=418.125µs web_handler=27.125µs query_engine=59.208µs scrape=489.208µs scrape_sd=1.413667ms notify=3.655875ms notify_sd=43.583µs rules=728µs tracing=163µs
+2024-04-22_13:27:56.98665 ts=2024-04-22T13:27:56.986Z caller=main.go:1114 level=info msg="Server is ready to receive web requests."
+2024-04-22_13:27:56.98679 ts=2024-04-22T13:27:56.986Z caller=manager.go:163 level=info component="rule manager" msg="Starting rule manager..."

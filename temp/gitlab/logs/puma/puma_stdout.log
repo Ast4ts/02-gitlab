@@ -1,0 +1,7 @@
+=== puma startup: 2024-04-22 13:27:51 +0000 ===
+{"timestamp":"2024-04-22T13:27:52.586Z","pid":4874,"message":"- Worker 0 (PID: 5698) booted in 0.57s, phase: 0"}
+{"timestamp":"2024-04-22T13:27:52.626Z","pid":4874,"message":"- Worker 2 (PID: 5707) booted in 0.6s, phase: 0"}
+{"timestamp":"2024-04-22T13:27:52.627Z","pid":4874,"message":"- Worker 1 (PID: 5705) booted in 0.61s, phase: 0"}
+{"timestamp":"2024-04-22T13:27:52.654Z","pid":4874,"message":"- Worker 4 (PID: 5716) booted in 0.6s, phase: 0"}
+{"timestamp":"2024-04-22T13:27:52.654Z","pid":4874,"message":"- Worker 3 (PID: 5714) booted in 0.62s, phase: 0"}
+{"timestamp":"2024-04-22T13:27:52.680Z","pid":4874,"message":"- Worker 5 (PID: 5718) booted in 0.62s, phase: 0"}
