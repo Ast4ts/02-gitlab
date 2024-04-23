@@ -1,3 +1,0 @@
-# Logfile created on 2024-04-22 13:26:34 +0000 by logger.rb/v1.5.0
-{"severity":"INFO","time":"2024-04-22T13:27:05.340Z","message":"Sidekiq 7.1.6 connecting to Redis with options {:size=\u003e10, :pool_name=\u003e\"internal\", :path=\u003e\"/var/opt/gitlab/redis/redis.socket\", :custom=\u003e{:instrumentation_class=\u003e\"Queues\"}, :url=\u003enil}"}
-{"severity":"INFO","time":"2024-04-22T13:33:19.189Z","message":"Sidekiq 7.1.6 connecting to Redis with options {:size=\u003e10, :pool_name=\u003e\"internal\", :path=\u003e\"/var/opt/gitlab/redis/redis.socket\", :custom=\u003e{:instrumentation_class=\u003e\"Queues\"}, :url=\u003enil}"}
