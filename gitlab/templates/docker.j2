@@ -8,6 +8,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         # Add any other gitlab.rb configuration here, each on its own line
+        external_url '{{ gitlab_url }}'
         gitlab_rails['lfs_enabled'] = true
         gitlab_rails['lfs_storage_path'] = '/var/opt/gitlab/lfs_data'
     ports:n

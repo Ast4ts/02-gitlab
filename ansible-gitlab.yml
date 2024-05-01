@@ -11,6 +11,7 @@
     #GitLab role variables
     gitlab_version: 16.11.0
     gitlab_dir: ${HOME}/gitlab
+    gitlab_url: gitlab.com
 
     #Minio role variables
     minio_root_usr: root
